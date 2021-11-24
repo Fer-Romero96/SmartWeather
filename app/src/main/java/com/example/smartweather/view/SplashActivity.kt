@@ -1,4 +1,4 @@
-package com.example.smartweather
+package com.example.smartweather.view
 
 import android.content.Context
 import android.content.Intent
@@ -7,11 +7,9 @@ import android.net.NetworkInfo
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
-import android.util.Log
 import android.widget.Toast
 import com.airbnb.lottie.LottieDrawable
 import com.example.smartweather.databinding.ActivitySplashBinding
-import com.example.smartweather.view.MainActivity
 
 class SplashActivity : AppCompatActivity() {
 

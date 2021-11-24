@@ -1,7 +1,6 @@
-package com.example.smartweather
+package com.example.smartweather.view.list
 
 import android.content.Context
-import android.content.Intent
 import android.net.ConnectivityManager
 import android.net.NetworkInfo
 import android.os.Bundle
@@ -10,12 +9,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.core.content.ContextCompat.getSystemService
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.smartweather.databinding.FragmentWeatherHomeBinding
-import com.example.smartweather.model.Daily
 import com.example.smartweather.view.WeatherAdapter
 import com.example.smartweather.viewmodel.WeatherViewModel
 
