@@ -1,11 +1,16 @@
 package com.example.smartweather
 
+import android.content.Context
 import android.content.Intent
+import android.net.ConnectivityManager
+import android.net.NetworkInfo
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.core.content.ContextCompat.getSystemService
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -30,7 +35,11 @@ class WeatherHomeFragment : Fragment() {
 
         viewModel = ViewModelProvider(this).get(WeatherViewModel::class.java)
 
-        createUI()
+        if (isOnline()){
+            createUI()
+        } else {
+            Toast.makeText(context, "Sin Conexión", Toast.LENGTH_LONG).show()
+        }
 
         return view
     }
@@ -61,5 +70,9 @@ class WeatherHomeFragment : Fragment() {
         _binding = null
     }
 
-
+    fun isOnline(): Boolean {
+        val connMgr = activity?.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+        val networkInfo: NetworkInfo? = connMgr.activeNetworkInfo
+        return networkInfo?.isConnected == true
+    }
 }

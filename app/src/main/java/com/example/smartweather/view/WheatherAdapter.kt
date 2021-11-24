@@ -29,6 +29,8 @@ class WeatherAdapter (val dayClick : (Daily) -> Unit) : RecyclerView.Adapter<Wea
         val day = daysList[position]
 
         holder.binding.DayClima.text = dateTime(day.dt.toInt(),-6)
+        holder.binding.DescClima.text = day.weather[0].main
+        holder.binding.DescClima.text = day.weather[0].description
 
         holder.itemView.setOnClickListener{ dayClick(day) }
     }
