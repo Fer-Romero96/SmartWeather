@@ -9,5 +9,18 @@
         android:id="@+id/weatherHomeFragment"
         android:name="com.example.smartweather.WeatherHomeFragment"
         android:label="fragment_weather_home"
-        tools:layout="@layout/fragment_weather_home" />
+        tools:layout="@layout/fragment_weather_home" >
+        <action
+            android:id="@+id/action_weatherHomeFragment_to_weatherDetailFragment"
+            app:destination="@id/weatherDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/weatherDetailFragment"
+        android:name="com.example.smartweather.WeatherDetailFragment"
+        android:label="fragment_weather_detail"
+        tools:layout="@layout/fragment_weather_detail" >
+        <argument
+            android:name="daily"
+            app:argType="com.example.smartweather.model.Daily" />
+    </fragment>
 </navigation>

@@ -7,8 +7,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.smartweather.databinding.FragmentWeatherHomeBinding
+import com.example.smartweather.model.Daily
 import com.example.smartweather.view.WeatherAdapter
 import com.example.smartweather.viewmodel.WeatherViewModel
 
@@ -37,17 +39,20 @@ class WeatherHomeFragment : Fragment() {
 
         binding.recyclerWeather.layoutManager = LinearLayoutManager(context)
 
-        binding.recyclerWeather.adapter = WeatherAdapter {
-
-        }
-
-
         viewModel.getListWheater()
 
         viewModel.dayList.observe(viewLifecycleOwner, { listWeather ->
             (binding.recyclerWeather.adapter as WeatherAdapter).setData(listWeather)
 
         })
+
+        binding.recyclerWeather.adapter = WeatherAdapter {
+
+            val action = WeatherHomeFragmentDirections.actionWeatherHomeFragmentToWeatherDetailFragment(it)
+
+            view?.findNavController()?.navigate(action)
+
+        }
 
     }
 

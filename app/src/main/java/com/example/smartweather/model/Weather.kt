@@ -1,7 +1,10 @@
 package com.example.smartweather.model
 
+import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
+import kotlinx.android.parcel.Parcelize
 
+@Parcelize
 data class WeatherResponse (
     val lat: Double,
     val lon: Double,
@@ -10,8 +13,9 @@ data class WeatherResponse (
     val timezoneOffset: Long,
     val current: Current,
     val daily: List<Daily>
-)
+) : Parcelable
 
+@Parcelize
 data class Current (
     val dt: Long,
     val sunrise: Long,
@@ -33,15 +37,17 @@ data class Current (
     @SerializedName("wind_gust")
     val windGust: Double,
     val weather: List<WeatherElement>
-)
+) : Parcelable
 
+@Parcelize
 data class WeatherElement (
     val id: Long,
     val main: String,
     val description: String,
     val icon: String
-)
+) : Parcelable
 
+@Parcelize
 data class Daily (
     val dt: Long,
     val sunrise: Long,
@@ -62,15 +68,17 @@ data class Daily (
     val pop: Double,
     val rain: Double? = null,
     val uvi: Double
-)
+) : Parcelable
 
+@Parcelize
 data class FeelsLike (
     val day: Double,
     val night: Double,
     val eve: Double,
     val morn: Double
-)
+) : Parcelable
 
+@Parcelize
 data class Temp (
     val day: Double,
     val min: Double,
@@ -78,5 +86,5 @@ data class Temp (
     val night: Double,
     val eve: Double,
     val morn: Double
-)
+) : Parcelable
 

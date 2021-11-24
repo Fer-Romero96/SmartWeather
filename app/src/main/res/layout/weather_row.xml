@@ -15,7 +15,11 @@
         <TextView
             android:id="@+id/DayClima"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Clima Mexico" />
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:text="Clima Mexico"
+            android:textAlignment="center"
+            android:textColor="@color/primary_dark"
+            android:textSize="14sp" />
     </LinearLayout>
 </androidx.cardview.widget.CardView>
