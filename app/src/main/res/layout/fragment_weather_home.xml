@@ -27,10 +27,27 @@
             android:textSize="34sp"
             android:textStyle="bold|italic" />
 
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="center"
+            android:src="@drawable/location" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Mexico City"
+            android:textAlignment="center"
+            android:textColor="@color/darkGray"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerWeather"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
             tools:listitem="@layout/weather_row" />
     </LinearLayout>
 

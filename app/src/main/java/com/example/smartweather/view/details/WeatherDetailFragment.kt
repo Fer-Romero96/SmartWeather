@@ -10,6 +10,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.navigation.fragment.navArgs
+import com.bumptech.glide.Glide
+import com.example.smartweather.R
 import com.example.smartweather.databinding.FragmentWeatherDetailBinding
 import java.text.SimpleDateFormat
 import java.util.*
@@ -50,6 +52,19 @@ class WeatherDetailFragment : Fragment() {
         binding.tempMorning.text = "${args.daily.temp.morn} °C"
         binding.main.text = args.daily.weather[0].main
         binding.tempDesc.text = args.daily.weather[0].description
+        binding.pressure.text = "${args.daily.pressure} hPa"
+        binding.humidity.text = "${args.daily.humidity} %"
+        binding.dewPoint.text = "${args.daily.dewPoint} °C"
+        binding.windSpeed.text = "${args.daily.windSpeed} mts/sec"
+        binding.windDeg.text = "${args.daily.windDeg} °"
+        binding.windGust.text = "${args.daily.windGust} mts/sec"
+
+        Glide.with(this)
+            .load("https://openweathermap.org/img/wn/${args.daily.weather[0].icon}@2x.png")
+            .override(300,300)
+            .centerCrop()
+            .error(R.drawable.ic_launcher_foreground)
+            .into(binding.iconWeather)
 
     }
 

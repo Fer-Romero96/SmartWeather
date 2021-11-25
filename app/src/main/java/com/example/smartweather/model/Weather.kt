@@ -59,9 +59,13 @@ data class Daily (
     val feelsLike: FeelsLike,
     val pressure: Long,
     val humidity: Long,
+    @SerializedName("dew_point")
     val dewPoint: Double,
+    @SerializedName("wind_speed")
     val windSpeed: Double,
+    @SerializedName("wind_deg")
     val windDeg: Long,
+    @SerializedName("wind_gust")
     val windGust: Double,
     val weather: List<WeatherElement>,
     val clouds: Long,

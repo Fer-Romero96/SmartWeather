@@ -28,8 +28,26 @@
             android:textSize="34sp"
             android:textStyle="bold|italic" />
 
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/location" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:text="Mexico City"
+            android:textAlignment="center"
+            android:textColor="@color/darkGray"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
         <View
-            android:id="@+id/view"
             android:layout_width="match_parent"
             android:layout_height="2dp"
             android:background="@color/darkGray" />
@@ -65,11 +83,17 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
             android:text="Temperature"
             android:textAlignment="center"
             android:textColor="@color/darkGray"
             android:textSize="20sp"
             android:textStyle="bold" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/darkGray" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -122,6 +146,7 @@
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textStyle="italic" />
+
         </LinearLayout>
 
         <LinearLayout
@@ -148,6 +173,7 @@
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textStyle="italic" />
+
         </LinearLayout>
 
         <LinearLayout
@@ -174,6 +200,7 @@
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textStyle="italic" />
+
         </LinearLayout>
 
         <LinearLayout
@@ -200,6 +227,7 @@
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textStyle="italic" />
+
         </LinearLayout>
 
         <LinearLayout
@@ -226,17 +254,184 @@
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textStyle="italic" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Pressure:"
+                android:textAlignment="center"
+                android:textColor="@color/darkGray"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/pressure"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="1018"
+                android:textAlignment="center"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Humidity:"
+                android:textAlignment="center"
+                android:textColor="@color/darkGray"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/humidity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="1018"
+                android:textAlignment="center"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Ath Temp:"
+                android:textAlignment="center"
+                android:textColor="@color/darkGray"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/dewPoint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="1018"
+                android:textAlignment="center"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Wind Speed:"
+                android:textAlignment="center"
+                android:textColor="@color/darkGray"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/windSpeed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="1018"
+                android:textAlignment="center"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Wind Direct:"
+                android:textAlignment="center"
+                android:textColor="@color/darkGray"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/windDeg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="1018"
+                android:textAlignment="center"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Wind Gust:"
+                android:textAlignment="center"
+                android:textColor="@color/darkGray"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/windGust"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="1018"
+                android:textAlignment="center"
+                android:textColor="@color/white" />
         </LinearLayout>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
             android:text="Weather"
             android:textAlignment="center"
             android:textColor="@color/darkGray"
             android:textSize="20sp"
             android:textStyle="bold" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/darkGray" />
+
+
+
+        <ImageView
+            android:id="@+id/iconWeather"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            tools:src="@tools:sample/avatars" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -291,14 +486,6 @@
                 android:textStyle="italic" />
 
         </LinearLayout>
-
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"
-            tools:src="@tools:sample/avatars" />
 
     </LinearLayout>
 
