@@ -12,7 +12,10 @@
         tools:layout="@layout/fragment_weather_home" >
         <action
             android:id="@+id/action_weatherHomeFragment_to_weatherDetailFragment"
-            app:destination="@id/weatherDetailFragment" />
+            app:destination="@id/weatherDetailFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popExitAnim="@android:anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/weatherDetailFragment"

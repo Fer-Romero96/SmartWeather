@@ -3,11 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Fernando/Documents/Android/SmartWeather/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.246875" />
+        <entry key="..\:/Fernando/Documents/Android/SmartWeather/app/src/main/res/drawable/ic_launcher_background.xml" value="0.246875" />
         <entry key="..\:/Fernando/Documents/Android/SmartWeather/app/src/main/res/layout/activity_main.xml" value="0.39010416666666664" />
         <entry key="..\:/Fernando/Documents/Android/SmartWeather/app/src/main/res/layout/activity_splash.xml" value="0.4041666666666667" />
         <entry key="..\:/Fernando/Documents/Android/SmartWeather/app/src/main/res/layout/fragment_weather_detail.xml" value="0.4041666666666667" />
         <entry key="..\:/Fernando/Documents/Android/SmartWeather/app/src/main/res/layout/fragment_weather_home.xml" value="0.4041666666666667" />
         <entry key="..\:/Fernando/Documents/Android/SmartWeather/app/src/main/res/layout/weather_row.xml" value="0.4041666666666667" />
+        <entry key="..\:/Fernando/Documents/Android/SmartWeather/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.246875" />
       </map>
     </option>
   </component>

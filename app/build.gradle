@@ -67,4 +67,8 @@ dependencies {
 
     // Lottie Dependencies
     implementation 'com.airbnb.android:lottie:4.2.1'
+
+    // Material Dependencies
+    implementation 'com.google.android.material:material:1.4.0'
+
 }
